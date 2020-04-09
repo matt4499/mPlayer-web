@@ -1,0 +1,7 @@
+upload mp4 file
+fragment mp4 file
+generate video id
+move everything into folder named id
+handle ids in url
+mysql video table, id, and info and all that stuff
+generate scrubbing thumbnails ?
