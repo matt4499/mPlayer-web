@@ -1,6 +1,5 @@
 $(function() {
-	
-	const source = './videos/video1/stream.mpd';
+	const source = './videos/output.mp4';
 	const video = document.querySelector('video');
 	const player = new Plyr(video);
 	window.player = player;
@@ -9,10 +8,15 @@ $(function() {
 		shaka.polyfill.installAll();
 		const shakaInstance = new shaka.Player(video);
 		shakaInstance.load(source);
+		console.log("[mPlayer] Using Shaka player");
+		const title = document.querySelector("body > h1 > center");
+		title.innerText = "[Debug] Using";
 	} else {
-		console.warn('Browser is not supported!');
+		video.src = source;
+		const title = document.querySelector("body > h1 > center");
+		title.innerText = "[Debug] Not Using";
+		console.log("[mPlayer] Browser does NOT support Shaka player. Using Legacy MP4/VIDEO source.");
 	}
-
 	$('.containercustom').css("width", "60%");
 	$('.containercustom').css("position", "absolute");
 	$('.containercustom').css("top", "60%");
