@@ -1,4 +1,8 @@
 # mPlayer-web
+
+## This is going to be archived, and redone with NodeJS instead of PHP.
+
+
 - this was originally just coding practice
 - i basically wanted to make a mock youtube
 - the video and audio i used were removed from the upload though
